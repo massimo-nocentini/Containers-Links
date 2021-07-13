@@ -6,12 +6,6 @@ Class {
 	#category : #'Containers-Links-Tests'
 }
 
-{ #category : #utilities }
-CTLinksValueLinkTest >> imagesPath [
-
-	^ self iceWorkingDirectory / 'images'
-]
-
 { #category : #tests }
 CTLinksValueLinkTest >> test11ValueLinksLoop [
 

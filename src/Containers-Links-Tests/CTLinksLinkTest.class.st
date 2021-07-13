@@ -6,12 +6,6 @@ Class {
 	#category : #'Containers-Links-Tests'
 }
 
-{ #category : #utilities }
-CTLinksLinkTest >> imagesPath [
-
-	^ self iceWorkingDirectory / 'images'
-]
-
 { #category : #tests }
 CTLinksLinkTest >> testEmptyLink [
 
