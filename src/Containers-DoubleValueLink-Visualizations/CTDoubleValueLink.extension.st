@@ -1,11 +1,7 @@
 Extension { #name : #CTDoubleValueLink }
 
 { #category : #'*Containers-DoubleValueLink-Visualizations' }
-CTDoubleValueLink >> instVarsNamesOrderedCollection [
+CTDoubleValueLink >> acceptSlotDescriptorsVisitor: aVisitor [
 
-	"We choose the following order in which the `value` slot is 
-	the rightmost because that allows us to compose better shapes 
-	pointed by its reference."
-
-	^ { #previousLink. #value. #nextLink }
+	^ aVisitor visitCTDoubleValueLink: self
 ]
