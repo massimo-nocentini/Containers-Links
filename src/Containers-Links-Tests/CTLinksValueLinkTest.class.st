@@ -55,6 +55,17 @@ CTLinksValueLinkTest >> test4321ValueLinks [
 ]
 
 { #category : #tests }
+CTLinksValueLinkTest >> test4321ValueLinksNested [
+
+	| l |
+	l := 4 ~~> self test321ValueLinks.
+
+	^ self
+		  exportSlotsGraphOf: l
+		  slotDescriptorsContext: SlotDescriptorsVisitorNestedLinks new
+]
+
+{ #category : #tests }
 CTLinksValueLinkTest >> testAsLinkedList [
 
 	^ self exportSlotsGraphOf: self testSimpleValueLink asLinkedList
