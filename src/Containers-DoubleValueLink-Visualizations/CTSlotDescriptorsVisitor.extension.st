@@ -1,7 +1,7 @@
-Extension { #name : #SlotDescriptorsVisitor }
+Extension { #name : #CTSlotDescriptorsVisitor }
 
 { #category : #'*Containers-DoubleValueLink-Visualizations' }
-SlotDescriptorsVisitor >> visitCTDoubleValueLink: aValueLink [
+CTSlotDescriptorsVisitor >> visitCTDoubleValueLink: aValueLink [
 
 	^ { #previousLink asSlotDescriptor }
 	  , (self visitValueLink: aValueLink)
