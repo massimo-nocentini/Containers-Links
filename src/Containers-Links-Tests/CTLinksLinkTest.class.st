@@ -27,11 +27,9 @@ CTLinksLinkTest >> testLinkNext3 [
 	l2 next: l3.
 	l3 next: l1.
 
-	l := l1 next: 2.
+	l := l1 next: 3.
 
-	self
-		assert: l equals: l3;
-		assert: (l1 next: 3) equals: l1.
+	self assert: l nextLink nextLink nextLink equals: nil.
 
 	^ self exportSlotsGraphOf: l
 ]
@@ -85,5 +83,5 @@ CTLinksLinkTest >> testThreeLinksTooMuchSkipping [
 	l1 next: l2.
 	l2 next: l3.
 
-	^ self should: [ l1 next: 10 ] raise: SubscriptOutOfBounds
+	^ self shouldnt: [ l1 next: 10 ] raise: SubscriptOutOfBounds
 ]
