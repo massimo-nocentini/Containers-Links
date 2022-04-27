@@ -10,7 +10,7 @@ Class {
 { #category : #visiting }
 CTSlotDescriptorsVisitorNestedLinks >> visitLink: aLink [
 
-	^ { ((self newSlotDescriptorSelector selector: #nextLink)
+	^ { ((self newSlotDescriptorSelector: #nextLink)
 		   inline;
 		   quote: [ :nextLink :aDfsWalker | 
 			   nextLink asShapeSlotsDfsTree: aDfsWalker ]) }
