@@ -62,7 +62,7 @@ CTLinksValueLinkTest >> test4321ValueLinksNested [
 
 	^ self
 		  exportSlotsGraphOf: l
-		  slotDescriptorsContext: CTSlotDescriptorsVisitorNestedLinks new
+		  slotDescriptorsVisitor: CTSlotDescriptorsVisitorNestedLinks new
 ]
 
 { #category : #tests }
