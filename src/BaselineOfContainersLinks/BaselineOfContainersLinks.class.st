@@ -8,15 +8,19 @@ Class {
 BaselineOfContainersLinks >> baseline: spec [
 
 	<baseline>
-	spec for: #common do: [ 
+	spec for: #common do: [ "Externals."
 		spec
 			baseline: 'ContainersEssentials'
-			with: [ 
-			spec repository: 'github://massimo-nocentini/Containers-Essentials' ].
+			with: [ spec repository: 'github://massimo-nocentini/Containers-Essentials:master' ].
 
+		"Packages"
 		spec
-			package: 'Containers-Links';
-			package: 'Containers-Links-Tests';
-			package: 'Containers-DoubleValueLink';
-			package: 'Containers-DoubleValueLink-Visualizations' ]
+			package: 'Containers-Links'
+			with: [ spec requires: #( 'ContainersEssentials' ) ];
+			package: 'Containers-Links-Tests'
+			with: [ spec requires: #( 'Containers-Links' ) ];
+			package: 'Containers-DoubleValueLink'
+			with: [ spec requires: #( 'Containers-Links' ) ];
+			package: 'Containers-DoubleValueLink-Visualizations'
+			with: [ spec requires: #( 'Containers-DoubleValueLink' ) ] ]
 ]
