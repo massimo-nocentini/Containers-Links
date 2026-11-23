@@ -1,3 +1,6 @@
+"
+I export the graphs of chains of `ValueLink` objects as images: acyclic and cyclic ones, made by `~~>` and by the conversions `asValueLink` and `asLinkedList`.
+"
 Class {
 	#name : #CTLinksValueLinkTest,
 	#superclass : #TestCase,

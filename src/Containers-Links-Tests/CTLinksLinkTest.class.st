@@ -1,3 +1,6 @@
+"
+I test the message `next:` of `Link`, with a link and with an integer as its argument, and export the graphs of the links as images.
+"
 Class {
 	#name : #CTLinksLinkTest,
 	#superclass : #TestCase,
